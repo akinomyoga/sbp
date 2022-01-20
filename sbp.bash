@@ -38,7 +38,7 @@ _sbp_set_prompt() {
   if [[ -n "$SSH_CLIENT" ]]; then
     title="${HOSTNAME:-ssh}:${title}"
   fi
-  printf '\e]2;%s\007' "$title"
+  printf '\e]2;%s\e\\' "$title"
 
   PS1=$(bash "${SBP_PATH}/src/main.bash" "$command_status" "$command_duration")
   [[ -n "$SBP_DEBUG" ]] && debug::tick_timer "Done"

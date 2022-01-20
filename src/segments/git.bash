@@ -58,8 +58,8 @@ segments::git() {
           upstream_data="${branch_line#* }"
           upstream_stripped="${upstream_data//[\[|\]]}"
           if [[ "$upstream_data" != "$upstream_stripped" ]]; then
-            outgoing_filled="${upstream_stripped/ahead / ${outgoing_icon}}"
-            upstream_status="${outgoing_filled/behind / ${incoming_icon}}"
+            outgoing_filled="${upstream_stripped/ahead /" ${outgoing_icon}"}"
+            upstream_status="${outgoing_filled/behind /" ${incoming_icon}"}"
           fi
       esac
     done <<< "$git_status"

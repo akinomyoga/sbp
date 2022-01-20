@@ -34,7 +34,7 @@ _sbp_set_prompt() {
   fi
 
   # TODO move this somewhere else
-  title="${PWD##*/}"
+  local title="${PWD##*/}"
   if [[ -n "$SSH_CLIENT" ]]; then
     title="${HOSTNAME:-ssh}:${title}"
   fi
